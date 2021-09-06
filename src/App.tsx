@@ -1,8 +1,8 @@
-import React from "react";
-import logo from "./logo.svg";
+import Routes from '../src/routes/routes';
+import Wrapper from './components/wrapper/wrapper.component';
 
 function App() {
-  return <div></div>;
+  return <Wrapper child={<Routes />} />;
 }
 
 export default App;
