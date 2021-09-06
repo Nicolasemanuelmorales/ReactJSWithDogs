@@ -1,8 +1,7 @@
-import Routes from '../src/routes/routes';
-import Wrapper from './components/wrapper/wrapper.component';
+import Routes from "../src/routes/routes";
 
 function App() {
-  return <Wrapper child={<Routes />} />;
+  return <Routes />;
 }
 
 export default App;
