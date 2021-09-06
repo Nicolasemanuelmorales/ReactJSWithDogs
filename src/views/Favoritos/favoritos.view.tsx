@@ -1,8 +1,8 @@
-import React from 'react';
-import { Grid } from '@material-ui/core';
-import { generalStyles } from './favorite.styles';
+import React from "react";
+import { Grid } from "@material-ui/core";
+import { generalStyles } from "./favoritos.styles";
 
-export default function Favorite() {
+export default function Favoritos() {
   const classes = generalStyles();
 
   return (
@@ -13,7 +13,7 @@ export default function Favorite() {
       justify="center"
       alignItems="center"
     >
-      Favorite
+      Holanda
     </Grid>
   );
 }
