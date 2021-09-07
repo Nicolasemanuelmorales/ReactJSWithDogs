@@ -1,5 +1,4 @@
 import Routes from "../src/routes/routes";
-
 function App() {
   return <Routes />;
 }

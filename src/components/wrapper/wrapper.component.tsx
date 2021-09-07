@@ -1,12 +1,14 @@
-import { Grid } from '@material-ui/core';
-import { generalStyles } from './wrapper.styles';
-
+import Menu from "../menu/menu.component";
 interface IwrapperProps {
-  child: any;
+  child: JSX.Element;
 }
 
 export default function Wrapper(props: IwrapperProps) {
-  const classes = generalStyles();
   const { child } = props;
-  return <Grid className={classes.base}>{child}</Grid>;
+  return (
+    <>
+      <Menu />
+      {child}
+    </>
+  );
 }
