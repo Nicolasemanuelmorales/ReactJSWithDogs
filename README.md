@@ -22,7 +22,8 @@
 
 ### Redux
 
-`npm i react-redux`
+`npm install react-redux`
+`npm install redux`
 
 ### Material UI
 
