@@ -3,6 +3,6 @@
   "name": "Example",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#21c1d1",
+  "theme_color": "#000",
   "background_color": "#ffffff"
 }

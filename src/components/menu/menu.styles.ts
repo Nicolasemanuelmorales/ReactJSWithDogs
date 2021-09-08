@@ -1,13 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
+import colors from "../../assets/colors";
 
 export const generalStyles = makeStyles((theme) => ({
   base: {
-    backgroundColor: "#21c1d1",
+    backgroundColor: colors.COLOR_PRINCIPAL,
   },
   boxButton: {
     textAlign: "center",
     height: 75,
-    color: "#FFF",
+    color: colors.BLANCO,
     paddingTop: 28,
     cursor: "pointer",
   },
@@ -24,11 +25,14 @@ export const generalStyles = makeStyles((theme) => ({
     borderLeftWidth: 0,
     borderBottomWidth: 0,
     borderRightWidth: 3,
-    borderColor: "#FFF",
+    borderColor: colors.BLANCO,
     borderStyle: "solid",
   },
   text: {
     fontSize: 16,
     fontWeight: 700,
+  },
+  paper: {
+    background: colors.COLOR_PRINCIPAL,
   },
 }));

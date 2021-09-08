@@ -1,10 +1,13 @@
+import { useState } from "react";
 import Menu from "../menu/menu.component";
-interface IwrapperProps {
+
+interface IProps {
   child: JSX.Element;
 }
 
-export default function Wrapper(props: IwrapperProps) {
+export default function Wrapper(props: IProps) {
   const { child } = props;
+
   return (
     <>
       <Menu />
