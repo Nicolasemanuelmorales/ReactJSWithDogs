@@ -33,7 +33,9 @@ export const generalStyles = makeStyles((theme) => ({
     fontWeight: 700,
   },
   paper: {
-    background: colors.COLOR_PRINCIPAL,
+    "& .MuiPaper-root": {
+      backgroundColor: colors.COLOR_PRINCIPAL,
+    },
   },
   boxMenu: {
     display: "flex",
