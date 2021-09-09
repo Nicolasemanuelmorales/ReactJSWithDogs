@@ -29,6 +29,14 @@ export const generalStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: colors.COLOR_PRINCIPAL,
     color: colors.BLANCO,
+    fontSize: 12,
+    "&:hover": {
+      backgroundColor: colors.COLOR_PRINCIPAL,
+    },
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 5,
+    paddingTop: 5,
   },
   buttonDisabled: {
     backgroundColor: colors.COLOR__PRINCIPAL_DISABLE,

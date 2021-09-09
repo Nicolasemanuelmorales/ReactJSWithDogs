@@ -45,16 +45,19 @@ export default function Home() {
         ) : (
           <>
             <Grid container direction="column" alignContent="center">
-              <Grid item xs={10} sm={8} md={6} className={classes.boxImg}>
+              <Grid item xs={11} sm={8} md={4} className={classes.boxImg}>
                 <img src={imageRandom.url} alt="dog" className={classes.img} />
               </Grid>
-              <Grid item xs={10} sm={8} md={6} className={classes.boxButton}>
+              <Grid item xs={11} sm={8} md={4} className={classes.boxButton}>
                 <Grid container>
                   <Grid item xs={6} className={classes.boxReload}>
                     <Button
+                      disableElevation
                       variant="contained"
                       className={classes.button}
-                      startIcon={<ReplayIcon />}
+                      startIcon={
+                        <ReplayIcon style={{ width: 16, height: 16 }} />
+                      }
                       onClick={getDog}
                     >
                       RECARGAR
@@ -62,6 +65,7 @@ export default function Home() {
                   </Grid>
                   <Grid item xs={6} className={classes.boxFav}>
                     <Button
+                      disableElevation
                       variant="contained"
                       disabled={
                         favoritos.filter((item) => item === imageRandom.url)
@@ -70,7 +74,7 @@ export default function Home() {
                           : true
                       }
                       className={classes.button}
-                      startIcon={<StarIcon />}
+                      startIcon={<StarIcon style={{ width: 16, height: 16 }} />}
                       onClick={() => {
                         // eslint-disable-next-line
                         setAlert(true),
@@ -85,7 +89,7 @@ export default function Home() {
                               );
                       }}
                     >
-                      FAVORITOS
+                      FAVORITO
                     </Button>
                   </Grid>
                 </Grid>
