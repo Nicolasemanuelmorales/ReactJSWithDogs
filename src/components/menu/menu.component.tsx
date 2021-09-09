@@ -69,7 +69,7 @@ export default function Menu() {
     </Grid>
   ) : (
     <>
-      <AppBar position="static" className={classes.black}>
+      <AppBar position="static" style={{ backgroundColor: "#000" }}>
         <Toolbar>
           <MenuIcon onClick={() => setOpen(true)} />
           <Typography
