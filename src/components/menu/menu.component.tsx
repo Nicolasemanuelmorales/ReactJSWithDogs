@@ -81,7 +81,7 @@ export default function Menu() {
       <Drawer
         anchor={"left"}
         open={open}
-        classes={{ paper: classes.paper }}
+        className={classes.paper}
         onClose={() => setOpen(false)}
       >
         <Grid container className={classes.boxMenu}>
