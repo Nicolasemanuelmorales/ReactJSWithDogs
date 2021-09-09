@@ -57,7 +57,7 @@ export default function Home() {
                       startIcon={<ReplayIcon />}
                       onClick={getDog}
                     >
-                      Recargar
+                      RECARGAR
                     </Button>
                   </Grid>
                   <Grid item xs={6} className={classes.boxFav}>
@@ -85,7 +85,7 @@ export default function Home() {
                               );
                       }}
                     >
-                      Favoritos
+                      FAVORITOS
                     </Button>
                   </Grid>
                 </Grid>
