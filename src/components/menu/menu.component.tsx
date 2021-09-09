@@ -97,7 +97,7 @@ export default function Menu() {
           </Grid>
         </Grid>
         <Divider className={classes.divider} />
-        <List className={classes.listMenu}>
+        <List style={{ paddingLeft: 15 }}>
           <ListItem button onClick={() => history.push("home")}>
             <ListItemIcon>
               <HomeIcon className={classes.white} />

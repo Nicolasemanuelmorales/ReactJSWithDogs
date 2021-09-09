@@ -60,9 +60,7 @@ export const generalStyles = makeStyles((theme) => ({
   divider: {
     backgroundColor: colors.DIVIDER,
   },
-  listMenu: {
-    paddingLeft: 15,
-  },
+
   white: {
     color: colors.BLANCO,
   },
