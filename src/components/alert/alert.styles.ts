@@ -6,5 +6,7 @@ export const generalStyles = makeStyles((theme) => ({
     cursor: "pointer",
     marginRight: 10,
   },
-  root: { backgroundColor: colors.COLOR_PRINCIPAL },
+  root: {
+    backgroundColor: colors.COLOR_PRINCIPAL,
+  },
 }));

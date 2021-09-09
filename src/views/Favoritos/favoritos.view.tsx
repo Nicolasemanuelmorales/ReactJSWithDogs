@@ -21,7 +21,7 @@ export default function Favoritos() {
             container
             justifyContent="flex-start"
             alignItems="center"
-            style={{ marginTop: 50, paddingLeft: 12.5, paddingRight: 12.5 }}
+            className={classes.boxGeneral}
           >
             {favoritos.map((item, index) => {
               return (

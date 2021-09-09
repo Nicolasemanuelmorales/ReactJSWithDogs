@@ -21,4 +21,9 @@ export const generalStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundColor: "black",
   },
+  boxGeneral: {
+    marginTop: 50,
+    paddingLeft: 12.5,
+    paddingRight: 12.5,
+  },
 }));
