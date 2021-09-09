@@ -57,10 +57,6 @@ export const generalStyles = makeStyles((theme) => ({
     fontSize: 20,
     marginLeft: 15,
   },
-  divider: {
-    backgroundColor: colors.DIVIDER,
-  },
-
   white: {
     color: colors.BLANCO,
   },

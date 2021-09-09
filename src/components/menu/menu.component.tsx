@@ -19,6 +19,7 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
+import colors from "../../assets/colors";
 
 export default function Menu() {
   const classes = generalStyles();
@@ -69,7 +70,10 @@ export default function Menu() {
     </Grid>
   ) : (
     <>
-      <AppBar position="static" style={{ backgroundColor: "#000" }}>
+      <AppBar
+        position="static"
+        style={{ backgroundColor: colors.COLOR_PRINCIPAL }}
+      >
         <Toolbar>
           <MenuIcon onClick={() => setOpen(true)} />
           <Typography
@@ -96,7 +100,7 @@ export default function Menu() {
             </Typography>
           </Grid>
         </Grid>
-        <Divider className={classes.divider} />
+        <Divider style={{ backgroundColor: colors.DIVIDER }} />
         <List style={{ paddingLeft: 15 }}>
           <ListItem button onClick={() => history.push("home")}>
             <ListItemIcon>
