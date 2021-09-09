@@ -7,7 +7,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import StarIcon from "@material-ui/icons/Star";
 import Divider from "@material-ui/core/Divider";
-
 import {
   AppBar,
   Drawer,
@@ -20,6 +19,7 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
+
 export default function Menu() {
   const classes = generalStyles();
   const history = useHistory();
@@ -39,7 +39,6 @@ export default function Menu() {
   return width > 800 ? (
     <Grid
       container
-      direction="row"
       justifyContent="space-evenly"
       alignItems="center"
       className={classes.base}
@@ -49,14 +48,12 @@ export default function Menu() {
         xs={4}
         className={`${classes.boxButton} ${classes.containerLogo} ${classes.border}`}
       >
-        <img src={logo} alt="hc" className={classes.logo} />
+        <img src={logo} alt="dog" className={classes.logo} />
       </Grid>
       <Grid
         item
         xs={4}
-        onClick={() => {
-          history.push("home");
-        }}
+        onClick={() => history.push("home")}
         className={`${classes.boxButton} ${classes.border}`}
       >
         <Typography children={"INICIO"} className={classes.text} />
@@ -64,9 +61,7 @@ export default function Menu() {
       <Grid
         item
         xs={4}
-        onClick={() => {
-          history.push("favoritos");
-        }}
+        onClick={() => history.push("favoritos")}
         className={classes.boxButton}
       >
         <Typography children={"FAVORITOS"} className={classes.text} />
@@ -74,17 +69,13 @@ export default function Menu() {
     </Grid>
   ) : (
     <>
-      <AppBar position="static" style={{ backgroundColor: "#000" }}>
+      <AppBar position="static" className={classes.black}>
         <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={() => setOpen(true)}
-          >
-            <MenuIcon />
-          </IconButton>
-          {location.pathname === "/home" ? "Inicio" : "Favoritos"}
+          <MenuIcon onClick={() => setOpen(true)} />
+          <Typography
+            className={classes.path}
+            children={location.pathname === "/home" ? "Inicio" : "Favoritos"}
+          />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -93,53 +84,42 @@ export default function Menu() {
         classes={{ paper: classes.paper }}
         onClose={() => setOpen(false)}
       >
-        <Grid
-          container
-          style={{
-            display: "flex",
-            alignItems: "center",
-            padding: 10,
-            minWidth: 250,
-            justifyContent: "flex-start",
-          }}
-        >
+        <Grid container className={classes.boxMenu}>
           <Grid item xs={4}>
             <IconButton onClick={() => setOpen(!open)}>
-              <img src={logo} alt="dog" style={{ width: 40, height: 40 }} />
+              <img src={logo} alt="dog" className={classes.img} />
             </IconButton>
           </Grid>
           <Grid item xs={8}>
-            <Typography style={{ color: "#fff", fontSize: 12 }}>
+            <Typography className={classes.titleMenu}>
               React.JS With Dogs
             </Typography>
           </Grid>
         </Grid>
-        <Divider style={{ backgroundColor: "#5a5a5a" }} />
-
-        <List style={{ paddingLeft: 15 }}>
-          <ListItem button style={{}}>
+        <Divider className={classes.divider} />
+        <List className={classes.listMenu}>
+          <ListItem button onClick={() => history.push("home")}>
             <ListItemIcon>
-              <HomeIcon style={{ color: "#fff" }} />
+              <HomeIcon className={classes.white} />
             </ListItemIcon>
             <ListItemText
               disableTypography
               primary={
-                <Typography style={{ color: "#FFFFFF", fontSize: 12 }}>
-                  Inicio
-                </Typography>
+                <Typography className={classes.listItem} children={"Inicio"} />
               }
             />
           </ListItem>
-          <ListItem button style={{}}>
+          <ListItem button onClick={() => history.push("favoritos")}>
             <ListItemIcon>
-              <StarIcon style={{ color: "#fff" }} />
+              <StarIcon className={classes.white} />
             </ListItemIcon>
             <ListItemText
               disableTypography
               primary={
-                <Typography style={{ color: "#FFFFFF", fontSize: 12 }}>
-                  Favoritos
-                </Typography>
+                <Typography
+                  className={classes.listItem}
+                  children={"Favoritos"}
+                />
               }
             />
           </ListItem>

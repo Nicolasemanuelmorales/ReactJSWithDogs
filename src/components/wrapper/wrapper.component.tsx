@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Menu from "../menu/menu.component";
 
 interface IProps {

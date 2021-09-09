@@ -13,15 +13,7 @@ export default function Favoritos() {
     <Wrapper
       child={
         favoritos[0] === "" ? (
-          <Typography
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100vh",
-              display: "flex",
-              fontWeight: 700,
-            }}
-          >
+          <Typography className={classes.empty}>
             No ha agregado ninguna imagen.
           </Typography>
         ) : (
@@ -39,23 +31,12 @@ export default function Favoritos() {
                   xs={6}
                   sm={4}
                   md={3}
-                  style={{
-                    textAlign: "center",
-                    marginBottom: 25,
-                    paddingLeft: 12.5,
-                    paddingRight: 12.5,
-                  }}
+                  className={classes.boxImg}
                 >
                   <Grid
-                    style={{
-                      height: 200,
-                      backgroundImage: "url(" + item + ")",
-                      backgroundSize: "contain",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      backgroundColor: "black",
-                    }}
-                  ></Grid>
+                    style={{ backgroundImage: "url(" + item + ")" }}
+                    className={classes.img}
+                  />
                 </Grid>
               );
             })}

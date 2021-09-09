@@ -3,17 +3,17 @@ import colors from "../../assets/colors";
 
 export const generalStyles = makeStyles((theme) => ({
   boxImg: {
-    marginTop: 50,
+    marginTop: 30,
     textAlign: "center",
     width: "100%",
-    maxHeight: 400,
-    minHeight: 400,
+    maxHeight: 350,
+    minHeight: 350,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
   img: {
-    maxHeight: 400,
+    maxHeight: 350,
     height: "auto",
     width: "auto",
     maxWidth: "100%",
