@@ -16,7 +16,7 @@ export const generalStyles = makeStyles((theme) => ({
   },
   img: {
     height: 200,
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundColor: "black",

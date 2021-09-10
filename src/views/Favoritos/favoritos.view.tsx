@@ -28,9 +28,10 @@ export default function Favoritos() {
                 <Grid
                   key={index}
                   item
-                  xs={6}
+                  xs={12}
                   sm={4}
                   md={3}
+                  lg={2}
                   className={classes.boxImg}
                 >
                   <Grid
