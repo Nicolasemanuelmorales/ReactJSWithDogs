@@ -9,13 +9,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../redux/reducers/rootReducer";
 import favoritoAction from "../../redux/actions/FavoritoAction";
 import { generalStyles } from "./home.styles";
-import Loader from "../../components/loader/loader.component";
-import colors from "../../assets/colors";
 import loaderAction from "../../redux/actions/LoaderAction";
 import Alert from "../../components/alert/alert.component";
 
 export default function Home() {
-  const loader = useSelector((state: IRootState) => state.loader.value);
   const favoritos = useSelector((state: IRootState) => state.favoritos.value);
   const [imageRandom, setImageRandom] = useState<Dog>();
   const [alert, setAlert] = useState(false);
@@ -31,7 +28,7 @@ export default function Home() {
         console.log(favoritos);
       })
       .finally(() => {
-        setTimeout(() => dispatch(loaderAction(false)), 1000);
+        setTimeout(() => dispatch(loaderAction(false)), 1500);
       });
   };
   // eslint-disable-next-line
@@ -100,7 +97,6 @@ export default function Home() {
               close={() => setAlert(false)}
               message="Se agrego la imagen a favoritos!"
             />
-            <Loader open={loader} size={50} color={colors.COLOR_PRINCIPAL} />
           </>
         )
       }
